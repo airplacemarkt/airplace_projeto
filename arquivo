@@ -1,0 +1,8 @@
+                <div class="div_icones">
+
+                     <p class="icone_carrinho"><i class="fas fa-shopping-cart"></i></p>
+                    <i class="fas fa-user-circle" id="icone_perfil"></i>
+                    <p class="welcome">Olá, <span id="user-name">[Nome do Usuário]</span></p>
+                </div>
+
+                
