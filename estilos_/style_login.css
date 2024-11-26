@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+:root {
+    --cor0: #2A0088;
+    --cor1: #FF0000;
+    --cor2: #FFAA00;
+    --cor3: #2A0088;
+    --cor4: #FFAA00;
+    --cor5: #FAFAFA;
+    --cor6: #ff8c00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background-color: var(--cor0);
+    padding: 10px 0;
+    color: white;
+    border-bottom: solid 4px var(--cor4);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.login {
+    color: white;
+}
+
+/* Estilos da tela de login */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Tela centralizada */
+    background-color: var(--cor5);
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Largura máxima */
+    text-align: center;
+    border: 2px solid var(--cor3);
+}
+
+.login-container h1 {
+    font-size: 2em;
+    color: var(--cor0);
+    margin-bottom: 20px;
+}
+
+.login-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor4);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #008f3a;
+}
+
+/* Estilos para as opções de link extra */
+.extra-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.extra-options a {
+    color: var(--cor0);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.extra-options a:hover {
+    color: var(--cor2);
+}
+
+/* Barra laranja */
+.barra-laranja {
+    height: 5px;
+    background: var(--cor2);
+    margin-top: 40px;
+}
+
+.button_entrar {
+    text-decoration: none;
+}
+
+
+/*FOOTER*/
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    border-top: 3px solid #FF6A00;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FF6A00;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}

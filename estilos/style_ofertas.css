@@ -1,0 +1,407 @@
+@charset "UTF-8";
+
+
+/*
+CORES DO SITE
+PALETA DE CORES DO SITE
+#2A0088 = AZUL/ROXO
+#FF0000 = VERMELHO GRADIENTE
+#FFAA00 = LARANJA GRADIENTE
+#006FFF = AZUL BOTÃO
+#00CF00 = VERDE BOTÃO
+#FAFAFA = FUNDO DO SITE
+*/
+
+:root {
+    --cor0: #2A0088;
+    --cor1: #FF0000;
+    --cor2: #FF6A00;
+    --cor3: #006FFF;
+    --cor4: #00CF00;
+    --cor5: #FAFAFA;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* Ajustes no Header */
+
+header {
+    background-color: var(--cor0);
+    padding: 10px 0;
+    color: white;
+    border-bottom: solid 4px var(--cor2)
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    /* Aumentando o espaçamento lateral */
+}
+
+.logo img {
+    width: 200px;
+    /* Ajuste o tamanho da logo */
+}
+
+
+
+/*barra de pesquisa*/
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #FF6A00;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+
+/* Ajuste na Right Info */
+
+.right-info {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.right-top {
+    display: flex;
+}
+
+.location-icon i {
+    font-size: 50px;
+    margin-right: 5px;
+    margin-right: 20px;
+}
+
+.text-enter {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Login a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.Login a:hover {
+    color: #FF6A00;
+}
+
+
+/* Ajustes na barra de navegação */
+
+nav {
+    display: flex;
+    height: 41px;
+    background-color: var(--cor0);
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -33px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6A00;
+}
+
+
+/* Linha colorida abaixo do menu */
+
+nav::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, var(--cor4), var(--cor2));
+    margin-top: 8px;
+}
+
+/*MAIN*/
+
+.main_cupom {
+    background-color: var(--cor0);
+    display: flex;
+    height: 30vh;
+    font-weight: 300;
+}
+
+.titulo_main_cupom {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 34px;
+    margin: 15px;
+}
+
+.p_cupom {
+    font-weight: bold;
+}
+
+.img_cupom_white {
+    width: 11%;
+    margin-left: 2%;
+    margin-right: 8%;
+}
+
+.logo_main {
+    width: 15%;
+}
+
+
+/* Estilos gerais para o layout */
+.conteudo {
+    display: flex;
+    margin: 30px;
+    gap: 20px;
+}
+
+/* Botão de filtros para mobile */
+.btn-filtros {
+    display: none;
+    background-color: #2A0088;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Barra lateral de filtros */
+.filtros {
+    width: 25%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filtros h3 {
+    color: #2A0088;
+    margin-bottom: 10px;
+}
+
+.filtro-categoria ul, .filtro-avaliacao ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.filtro-categoria li, .filtro-avaliacao li {
+    margin-bottom: 10px;
+}
+
+.filtro-preco {
+    margin: 20px 0;
+}
+
+.slider {
+    width: 100%;
+}
+
+#valor-preco {
+    font-weight: bold;
+}
+
+/* Estilos das ofertas */
+.ofertas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 75%;
+}
+
+.card-oferta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-oferta:hover {
+    transform: translateY(-5px);
+}
+
+.card-oferta img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.preco {
+    font-size: 18px;
+    color: #333;
+}
+
+.preco span {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.btn-comprar {
+    background-color: #FFAA00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    background-color: #ff8800;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .btn-filtros {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .filtros {
+        display: none;
+        width: 100%;
+        position: absolute;
+        background-color: #f9f9f9;
+        z-index: 999;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+    }
+
+    .ofertas-container {
+        width: 100%;
+    }
+}
+
+/* Mostra o menu de filtros quando o botão for clicado */
+.filtros.aberto {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    border-top: 3px solid #FF6A00;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FF6A00;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
